@@ -1,0 +1,16 @@
+[package]
+name = "dynoplot"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+image = { version = "0.24.3", features = ["rgb"] }
+lazy_static = "1.4.0"
+plotters = { version = "0.3.4", default-features = false, features = ["svg_backend", "line_series", "point_series", "errorbar"] }
+
+
+[lib]
+name = "dynoplot"
+crate-type = ["staticlib", "cdylib"]
